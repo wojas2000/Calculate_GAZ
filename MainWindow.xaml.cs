@@ -42,12 +42,12 @@ namespace Calculate_GAZ
             }
             else
             {
-                PGN_factor = 11.5;
+                PGN_factor = 11.319;
             }
 
             if (GasInm3 >= 0)
             {
-                multi = GasInm3 * PGN_factor; //factor for gas in PGNiG default 11.5
+                multi = GasInm3 * PGN_factor; //factor for gas in PGNiG default 11.319
                 GasShowText.Content = multi;
             }
             else
@@ -63,11 +63,11 @@ namespace Calculate_GAZ
 
             GasConsumption = multi * 24.62 * 0.01;
 
-            PayMonth = x * 6.80;
+            PayMonth = x * 6.30;
             MonthPayShow.Content = "Months constant pay for Gas Company:" + PayMonth;
 
 
-            DistributionConstantPay = x * 33.14;  //calculation constant distribution
+            DistributionConstantPay = x * 36.75;  //calculation constant distribution
             DistributionPayShow.Content = "Distribution constant: " + DistributionConstantPay;
 
             DistributionVariable = multi * 3.69 * 0.01; //calculation variable distribution 
