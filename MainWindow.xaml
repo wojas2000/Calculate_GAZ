@@ -1,0 +1,25 @@
+﻿<Window x:Class="Calculate_GAZ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculate_GAZ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="InformationLabel" Content="Program do obliczania rachunku za gaz." HorizontalAlignment="Left" Margin="282,10,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Label x:Name="GasShowLabel" Content="Podaj stan licznika w m3:" HorizontalAlignment="Left" Margin="55,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="GasReadText" HorizontalAlignment="Left" Margin="216,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="GasReadTextChanged" UndoLimit="1000"/>
+        <Label x:Name="GasShowLabelConwersionNumber" Content="Wprowadź współ. konwersji dla PGNIG (domyślnie 11,5): " HorizontalAlignment="Left" Margin="55,102,0,0" VerticalAlignment="Top" Width="5305"/>
+        <Label x:Name="GasShowLabelkWh" Content="Ilość gazu w przeliczeniu na kWh:" HorizontalAlignment="Left" Margin="55,133,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="GasShowText" Content="" HorizontalAlignment="Left" Margin="257,133,0,0" VerticalAlignment="Top" TextInput="GasShowTextkWhCalculation" Background="White" Width="111" BorderBrush="Black"/>
+        <Button x:Name="CalculateButton" Content="Oblicz" HorizontalAlignment="Left" Margin="334,390,0,0" VerticalAlignment="Top" Width="76" Click="CalculateButtonClick"/>
+        <Label x:Name="MonthShowLabel" Content="Write how many months you want do check (2, 6, 10):" HorizontalAlignment="Left" Margin="55,176,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="MonthReadText" HorizontalAlignment="Left" Margin="354,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="MonthReadTextChanged" UndoLimit="1000"/>
+        <Label x:Name="MonthPayShow" Content="Constant month pay:  " HorizontalAlignment="Left" Margin="55,217,0,0" VerticalAlignment="Top" TextInput="MonthPayChanged" Width="377" Height="34"/>
+        <Label x:Name="DistributionPayShow" Content="Distribution constant pay: " HorizontalAlignment="Left" Margin="55,256,0,0" VerticalAlignment="Top" TextInput="DistributionPayChanged" Width="377" Height="34"/>
+        <Label x:Name="DistributionVariableShow" Content="Distribution variable: " HorizontalAlignment="Left" Margin="55,295,0,0" VerticalAlignment="Top" TextInput="DistributionVariableShowChanged" Width="377" Height="34"/>
+        <Label x:Name="TotalShowPay" Content="Koszt całego rachunku za okres rozliczeniowy: " HorizontalAlignment="Left" Margin="257,353,0,0" VerticalAlignment="Top" TextInput="TotalShowPayChanged"/>
+        <TextBox x:Name="FactorReadText" HorizontalAlignment="Left" Margin="372,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="FactorReadTextChange"/>
+    </Grid>
+</Window>
